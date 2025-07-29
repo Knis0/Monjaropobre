@@ -774,61 +774,48 @@ src="https://www.facebook.com/tr?id=723340397337602&ev=PageView&noscript=1"
         
     </section>
 
+<!-- Seus scripts de funcionalidades anteriores -->
     <script>
         // Contador decrescente de vagas
         let spots = 100;
         const spotElement = document.getElementById('remaining-spots');
         
         function updateSpots() {
-            // Diminui entre 1-3 vagas a cada 20-60 segundos
             const decrease = Math.floor(Math.random() * 3) + 1;
             spots = Math.max(0, spots - decrease);
             spotElement.textContent = spots;
-            
-            // Muda a cor quando estiver acabando
             if(spots < 30) {
                 spotElement.style.color = '#ffcc00';
                 spotElement.style.fontWeight = 'bold';
             }
-            
-            // Define o próximo intervalo aleatório (20-60 segundos)
             const nextInterval = Math.floor(Math.random() * 40000) + 20000;
             setTimeout(updateSpots, nextInterval);
         }
-        
-        // Inicia o contador
-        setTimeout(updateSpots, 15000); // Começa após 15 segundos
-        
-     // Notificações de compra - Versão atualizada
-    Notiflix.Notify.Init({
-        position: 'left-bottom',
-        cssAnimationStyle: 'from-left',
-        timeout: 4000
-    });
+        setTimeout(updateSpots, 15000);
 
-    const names_fem = [
-        "Tatiana", "Ivone", "Josefina", "Nélia", "Sílvia", "Celina", "Jandira", "Odete",
-        "Rute", "Tânia", "Verónica", "Anabela", "Milena", "Ângela", "Yara", "Nair",
-        "Cândida", "Albertine", "Emília", "Marisa", "Efigênia", "Márcia", "Idalina",
-        "Cláudia", "Dalila"
-    ];
-    
-    function showNotification() {  
-        const name = names_fem[Math.floor(Math.random() * names_fem.length)];
-        const minutes = Math.floor(Math.random() * 59) + 1;
-        
-       const msg = `<strong>${name}</strong> acabou de comprar o <strong>Monjaro Pobre</strong> há ${minutes} minutos atrás!`;
+        // Notificações de compra
+        Notiflix.Notify.Init({
+            position: 'left-bottom',
+            cssAnimationStyle: 'from-left',
+            timeout: 4000
+        });
 
-        Notiflix.Notify.Success(msg);
+        const names_fem = [
+            "Tatiana", "Ivone", "Josefina", "Nélia", "Sílvia", "Celina", "Jandira", "Odete",
+            "Rute", "Tânia", "Verónica", "Anabela", "Milena", "Ângela", "Yara", "Nair",
+            "Cândida", "Albertine", "Emília", "Marisa", "Efigênia", "Márcia", "Idalina",
+            "Cláudia", "Dalila"
+        ];
         
-        // Próxima notificação em 5-20 segundos
-        setTimeout(showNotification, Math.floor(Math.random() * 15000) + 5000);
-    }  
-    
-    // Primeira notificação após 5 segundos
-    setTimeout(showNotification, 5000);
+        function showNotification() {  
+            const name = names_fem[Math.floor(Math.random() * names_fem.length)];
+            const minutes = Math.floor(Math.random() * 59) + 1;
+            const msg = `<strong>${name}</strong> acabou de comprar o <strong>Monjaro Pobre</strong> há ${minutes} minutos atrás!`;
+            Notiflix.Notify.Success(msg);
+            setTimeout(showNotification, Math.floor(Math.random() * 15000) + 5000);
+        }  
+        setTimeout(showNotification, 5000);
 
-        
         // Slider automático
         let currentSlide = 0;
         const slides = document.querySelectorAll('.slide');
@@ -838,38 +825,54 @@ src="https://www.facebook.com/tr?id=723340397337602&ev=PageView&noscript=1"
             currentSlide = (currentSlide + 1) % totalSlides;
             document.querySelector('.slider').style.transform = `translateX(-${currentSlide * 100}%)`;
         }
-        
         setInterval(nextSlide, 5000);
-        
-    // Script para o FAQ acordeão
-    document.querySelectorAll('.faq-question').forEach(question => {
-        question.addEventListener('click', () => {
-            const answer = question.nextElementSibling;
-            const icon = question.querySelector('.faq-icon');
-            const isVisible = answer.style.display === 'block';
-            
-            // Fecha todas as respostas
-            document.querySelectorAll('.faq-answer').forEach(ans => {
-                ans.style.display = 'none';
+
+        // FAQ Acordeão
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const icon = question.querySelector('.faq-icon');
+                const isVisible = answer.style.display === 'block';
+                
+                document.querySelectorAll('.faq-answer').forEach(ans => {
+                    ans.style.display = 'none';
+                });
+                document.querySelectorAll('.faq-icon').forEach(ic => {
+                    ic.textContent = '+';
+                });
+                
+                if (!isVisible) {
+                    answer.style.display = 'block';
+                    icon.textContent = '-';
+                    question.style.background = '#f5f5f5';
+                } else {
+                    answer.style.display = 'none';
+                    icon.textContent = '+';
+                    question.style.background = '#fff';
+                }
             });
-            
-            // Reseta todos os ícones
-            document.querySelectorAll('.faq-icon').forEach(ic => {
-                ic.textContent = '+';
-            });
-            
-            // Abre/fecha a resposta clicada
-            if(!isVisible) {
-                answer.style.display = 'block';
-                icon.textContent = '-';
-                question.style.background = '#f5f5f5';
-            } else {
-                answer.style.display = 'none';
-                icon.textContent = '+';
-                question.style.background = '#fff';
-            }
         });
-    });
-</script>
+    </script>
+
+    <!-- Scripts do Utmify -->
+
+    <!-- Coleta UTMs -->
+    <script
+      src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+      dados-utmify-prevent-xcod-sck
+      dados-utmify-prevent-subids
+      async
+      defer
+    ></script>
+
+    <!-- API de Conversões (pixel utmify) -->
+    <script>
+      window.pixelId = "688900934ecca34fff500072";
+      var a = document.createElement("script");
+      a.setAttribute("async", "");
+      a.setAttribute("defer", "");
+      a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+      document.head.appendChild(a);
+    </script>
 </body>
 </html>
