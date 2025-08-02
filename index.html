@@ -1,26 +1,9 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '723340397337602');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=723340397337602&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Monjaro Pobre - Emagreça Naturalmente com receitas caseiras</title>
+    <title>Monjaro Pobre - O Segredo dos Magros Revelado</title>
     <script src="https://cdn.jsdelivr.net/npm/notiflix@2.6.0/dist/notiflix-aio-2.6.0.min.js"></script>
     <style>
         * {
@@ -37,73 +20,68 @@ src="https://www.facebook.com/tr?id=723340397337602&ev=PageView&noscript=1"
             height: auto;
         }
         
-        /* Barra de escassez fixa */
-        .scarcity-bar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background-color: #d10c06;
-            color: white;
-            padding: 10px;
-            text-align: center;
-            font-weight: bold;
-            z-index: 1000;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-        }
-         .section-1 {
+       
+        
+        .section-1 {
             min-height: auto;
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
             padding: 70px 20px 40px;
-            background-color: #200129;
+            background-color: #ffffff;
         }
         
-        .proof-image {
-            max-width: 600px;
-            width: 60%;
-            margin: 5px 0;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-        }
+       
         
         .product-title {
             font-size: 2.8rem;
             font-weight: 900;
-            color: #ea3675;
-            margin: 5px 0;
+            color: #110e0f;
+            margin: 20px 0;
             text-transform: uppercase;
         }
         
-        .ebook-description {
-            max-width: 600px;
-            margin: 15px auto;
-            color: #ea3675;
-            font-size: 1.1rem;
-            padding: 0 15px;
-        }
-         .ebook-descricao {
-            max-width: 600px;
-            margin: 15px auto;
-            color: #ebe9e9;
-            font-size: 1.1rem;
-            padding: 0 15px;
-        }
+        
+        .ebook-descricao {
+  padding: 8px;
+  background-color: #ffffff; /* tom amarelo claro */
+ /* amarelo mais forte para destaque */
+  margin-top: 65px;
+  font-family: Arial, sans-serif;
+}
+
+.atencao {
+  color: #191717;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.atencao strong {
+  color: #960a06; /* vermelho suave para chamar atenção */
+}
         
         .buy-button {
-            background-color: #3db60d;
-            color: white;
-            border: none;
-            padding: 12px 35px;
-            font-size: 1.3rem;
-            border-radius: 50px;
-            cursor: pointer;
-            margin: 4px 0;
-            font-weight: bold;
-            transition: all 0.3s ease;
-        }
+    background-color: #4CAF50; /* Verde moderno */
+    color: white;
+    border: none;
+    padding: 12px 35px;
+    font-size: 1.3rem;
+    border-radius: 7px;
+    cursor: pointer;
+    margin: 10px 0;
+    font-weight: bold;
+    transition: all 0.3s ease;
+
+    /* Sombra leve abaixo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Efeito ao passar o mouse */
+.buy-button:hover {
+    background-color: #43A047; /* Um verde mais escuro */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
         
         .buy-button:hover {
             background-color: #2e8b0d;
@@ -147,8 +125,17 @@ src="https://www.facebook.com/tr?id=723340397337602&ev=PageView&noscript=1"
         /* Seção Resultados */
         .results-section {
             padding: 60px 20px;
-            background-color: #ea3675;
+            background-color: #f5f4f4;
         }
+        .texto-preto {
+  color: #000000;
+  font-weight: 800;
+}
+
+.texto-verde {
+  color: #4da517;
+  font-weight: 800;
+}
         
         .slider-container {
             position: relative;
@@ -226,7 +213,7 @@ src="https://www.facebook.com/tr?id=723340397337602&ev=PageView&noscript=1"
         /* Seção Garantia */
         .guarantee-section {
             padding: 60px 20px;
-            background-color: #eeedee ;
+            background-color: #ffffff ;
             text-align: center;
         }
         
@@ -236,20 +223,19 @@ src="https://www.facebook.com/tr?id=723340397337602&ev=PageView&noscript=1"
             margin: 30px auto;
         }
         
-        /* Botões CTA */
         .cta-botao {
-            background-color: #3db60d;
-            color: white;
-            border: none;
-            padding: 15px 40px;
-            font-size: 1.1rem;
-            border-radius: 50px;
-            cursor: pointer;
-            margin: 20px 0;
-            font-weight: bold;
-            transition: all 0.3s ease;
-            display: inline-block;
-        }
+    background-color: #3db60d;
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    margin: 20px auto;       /* Centraliza horizontalmente */
+    font-weight: bold;
+    transition: all 0.3s ease;
+    display: block;          /* Obrigatório para margin funcionar */
+}
         
         .cta-button {
             background-color: #3db60d;
@@ -290,17 +276,14 @@ src="https://www.facebook.com/tr?id=723340397337602&ev=PageView&noscript=1"
             }
             
             .proof-image {
-                max-width: 95%;
+                max-width: 60%;
             }
             
             .ebook-description {
                 font-size: 1rem;
             }
             
-            .scarcity-bar {
-                font-size: 0.8rem;
-                padding: 8px 5px;
-            }
+         
             
             .section-1 {
                 padding: 60px 15px 30px;
@@ -324,7 +307,7 @@ src="https://www.facebook.com/tr?id=723340397337602&ev=PageView&noscript=1"
             .section-title {
                 font-size: 1.2rem;
                 color: #141414;
-                margin-bottom: 90px;
+                margin-bottom: 14px;
             }
             
             .buy-button, .cta-button {
@@ -351,7 +334,7 @@ src="https://www.facebook.com/tr?id=723340397337602&ev=PageView&noscript=1"
             .section-titleesco {
                 font-size: 1.2rem;
                 color: #100015;
-                margin-bottom: 90px;
+                margin-bottom: 30px;
                 text-align: center;
             }
             .value-item:hover {
@@ -364,7 +347,7 @@ src="https://www.facebook.com/tr?id=723340397337602&ev=PageView&noscript=1"
   /* Seção Riscos */
         .bene-section {
             padding: 60px 20px;
-            background-color: #ea3675;
+            background-color: #e5e5e5;
         }
         
         .bene-grid {
@@ -376,7 +359,7 @@ src="https://www.facebook.com/tr?id=723340397337602&ev=PageView&noscript=1"
         }
         
         .bene-card {
-            background: #6e003c;
+            background:#365d03;
             color: white;
             border-radius: 15px;
             padding: 35px;
@@ -397,384 +380,896 @@ src="https://www.facebook.com/tr?id=723340397337602&ev=PageView&noscript=1"
             }
         }
         
+        .sobre-o-produto {
+  background-color: #f7fdf8; /* tom verde super claro */
+  padding: 50px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.sobre-o-produto h2 {
+  font-size: 36px;
+  color: #070807; /* verde escuro saudável */
+  margin-bottom: 20px;
+  text-align: center;
+}
+.preto {
+  color: #000000; /* Preto puro */
+}
+
+.verde {
+  color: #2e7d32; /* Verde saudável */
+}
+
+.sobre-o-produto p {
+  font-size: 17px;
+  color: #120f0f;
+  line-height: 1;
+  max-width: 700px;
+  margin: 10px auto;
+  
+}
+
+.sobre-o-produto ul {
+  list-style: none;
+  padding: 0;
+  max-width: 700px;
+  margin: 20px auto;
+}
+
+.sobre-o-produto ul li {
+  font-size: 19px;
+  margin-bottom: 10px;
+  padding-left: 30px;
+  position: relative;
+  color: #0a7c04;
+}
+
+.sobre-o-produto ul li::before {
+  content: "✔️";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+        .porque-monjaro {
+  padding: 50px 20px;
+  background-color: #d1cbcb;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.porque-monjaro h2 {
+  font-size: 28px;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.porque-monjaro .verde {
+  color: #2e7d32;
+}
+.porque-monjaro {
+  padding: 50px 20px;
+  background-color: #fdfdfd;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.porque-monjaro h2 {
+  font-size: 28px;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.porque-monjaro .verde {
+  color: #2e7d32;
+}
+
+.porque-monjaro {
+  padding: 50px 20px;
+  font-family: Arial, sans-serif;
+  background-color: #fdfdfd;
+  text-align: center;
+}
+
+.porque-monjaro h2 {
+  font-size: 28px;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.porque-monjaro .verde {
+  color: #2e7d32;
+}
+
+/* Bloco principal com display flex */
+.bloco {
+  display: flex;
+  overflow: hidden;
+  border-radius: 10px;
+  margin: 20px auto;
+  max-width: 900px;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Cores principais */
+.vermelho {
+  background-color: #31aa38;
+}
+.castanho {
+  background-color: #8d6e63;
+}
+.rojo {
+  background-color: #3f2b9f;
+}
+
+/* Lado da imagem */
+.imagem-area {
+  width: 35%;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Fundo único para cada imagem */
+.imagem-1 {
+  background-color: #fcfcfc;
+}
+.imagem-2 {
+  background-color: #b8d5a6;
+}
+.imagem-3 {
+  background-color: #ffffff;
+}
+
+/* Imagem */
+.imagem-area img {
+  max-height: 120px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Lado do texto */
+.texto-area {
+  width: 65%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;       /* ✅ Corrigido para alinhar subtítulo e texto */
+  align-items: flex-start;      /* ✅ Alinhamento à esquerda */
+  text-align: left;
+  box-sizing: border-box;
+}
+
+/* Subtítulo (título dentro do bloco de texto) */
+.subtitulo {
+  color: #FFD700;               /* Amarelo ouro */
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  line-height: 1.4;
+  word-break: keep-all;         /* ✅ Impede quebras estranhas de palavras */
+}
+
+/* Parágrafo */
+.texto-area p {
+  font-size: 13px;
+  line-height: 1.5;
+  margin: 0;
+}
+.porque-monjaro .vverde {
+  color: #29aa2f;
+}
+
+/* QUADRO DO CHECKOUT */.checkout-quadro {
+  background-color: #fefefe; /* fundo verde */
+  border: 2px solid #2e7d32; /* borda visível */
+  border-radius: 18px;
+  padding: 25px 20px;
+  width: 100%;
+  max-width: 360px; /* largura parecida com celular */
+  margin: 40px auto;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* destaque */
+}
+
+/* TÍTULO DENTRO DO QUADRO */
+.checkout-titulo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff; /* branco para destacar */
+  background-color: #2e7d32;
+  padding: 12px 10px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  border: 1px solid #1b5e20;
+}
+
+
+.checkout-logo {
+  max-width: 130px;
+  margin-bottom: 20px;
+}
+
+.checkout-titulo {
+  font-size: 33px;
+  font-weight: bold;
+  background-color: #73d078;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 4px;
+  border: 1px solid #ddd;
+}
+.checkout-titulol {
+  font-size: 33px;
+  font-weight: bold;
+  background-color: #73d078;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+}
+/*abaixo do 37,90*/
+.checkout-tituloll {
+  font-size: 15px;
+  font-weight: bold;
+  background-color: #73d078;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 4px;
+  border: 1px solid #ddd;
+}
+.checkout-titulolll {
+  font-size: 15px;
+  font-weight: bold;
+  background-color: #73d078;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+}
+
+/* Ítens com borda visível */
+.itens-checkout {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.item-checkout {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.icone-check {
+  width: 30px;
+  height: 30px;
+}
+
+.check-titulo {
+  font-size: 16px;
+  font-weight: bold;
+  color: #2e7d32;
+  margin-bottom: 5px;
+}
+
+.check-desc {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Preço */
+.preco-area {
+  margin-top: 25px;
+}
+
+.linha {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 20px 0;
+}
+
+.preco-total {
+  font-size: 35px;
+  color: #888;
+  margin-bottom: 5px;
+}
+
+.preco-final {
+  font-size: 45px;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.preco-destaque {
+  font-size: 28px;
+  font-weight: bold;
+  color: #e53935;
+  margin-top: 10px;
+}
+
+.aviso-checkout {
+  font-size: 13px;
+  color: #e53935;
+  margin-top: 20px;
+  font-style: italic;
+}
+
+/* Botão e ícone de segurança */
+.btn-checkout-area {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.btn-cta {
+  background-color: #10d16d;
+  color: white;
+  border: none;
+  padding: 18px 60px;
+  font-size: 22px;
+  border-radius: 16px;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  animation: pulse 2s infinite;
+}
+
+.btn-cta:hover {
+  background-color: #247905;
+  transform: scale(1.03);
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(61, 182, 13, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(61, 182, 13, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(61, 182, 13, 0);
+  }
+}
+
+.icones-seguro {
+  margin-top: 20px;
+  max-width: 280px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.icone-quadrado-svg {
+  width: 36px;
+  height: 36px;
+  background-color: #f7f8f7; /* tom pastel verde claro */
+  border: 2px solid #dbd419;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+.preco-area {
+  margin-bottom: 15px;
+}
+
+.preco-antigo {
+  font-size: 23px;
+  color: #b81d1d;
+  font-weight: bold;
+  margin: 0;
+}
+
+.preco-final {
+  font-size: 28px;
+  margin: 5px 0;
+  color: #494848;
+}
+
+.valor-promocional {
+  font-size: 65px;
+  font-weight: bold;
+  color: #69dc6e;
+  margin: 0;
+}
+.bonus-alerta {
+  background-color: #fefefe;
+  border: 2px dashed #fbc02d;
+  padding: 10px;
+  font-weight: bold;
+  color: #f9a825;
+  margin-bottom: 20px;
+  font-size: 21px;
+  border-radius: 23px;
+}
+.icone-bonus-svg {
+  display: inline-flex;
+  width: 28px;
+  height: 28px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.icone-bonus-svg svg {
+  width: 100%;
+  height: 100%;
+}
+<!-- CSS da seção FAQ -->
+<style>
+  .faq-section {
+    padding: 50px 20px;
+    background-color: #f7f7f7;
+    font-family: Arial, sans-serif;
+  }
+
+  .faq-title {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #333;
+  }
+
+  .faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .faq-item {
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    background-color: #fff;
+    overflow: hidden;
+  }
+
+  .faq-question {
+    padding: 15px 20px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e8f5e9;
+    transition: background-color 0.3s ease;
+  }
+
+  .faq-question:hover {
+    background-color: #d0e9d3;
+  }
+
+  .faq-answer {
+    display: none;
+    padding: 15px 20px;
+    font-size: 15px;
+    color: #555;
+    background-color: #fafafa;
+  }
+
+  .faq-icon {
+    font-size: 24px;
+    transition: 0.3s;
+  }
+  .slider-wrapper {
+  position: relative;
+  max-width: 90%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.slider-container {
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  will-change: transform;
+}
+
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.slide img:hover {
+  transform: scale(1.02);
+}
+
+.slide-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 128, 0, 0.7);
+  border: none;
+  color: #fff;
+  font-size: 28px;
+  padding: 12px 18px;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 50%;
+  transition: background 0.3s ease;
+}
+
+.slide-btn:hover {
+  background-color: rgba(0, 100, 0, 0.9);
+}
+
+.prev-btn {
+  left: 10px;
+}
+
+.next-btn {
+  right: 10px;
+}
+</style>
     </style>
 </head>
 <body>
     <!-- Barra de escassez com contador -->
-    <div class="scarcity-bar">
-         OFERTA POR TEMPO LIMITADO RESTAM - <span id="remaining-spots">100</span>   MONJARO POBRE DISPONÍVEIS!
-    </div>
+   
     
     <section class="section-1">
         <!-- Prova social antes/depois -->
+        <img src="https://i.ibb.co/N64hX7Nc/h-TSo-MYvay-Vz-Om3wd8-RPj-Bw87g2-VQs-Znk-DKix-Spz0e-Eyfv-YW6.webp" alt="Resultados Antes e Depois" class="proof-image">
         
         <!-- Título do produto -->
-        <h1 class="product-title">Monjaro Pobre</h1>
+        <h1 class="product-title">Elimine até 10kg de gordura em 30dias com essa nova receita Monjaro de Pobre</h1>
         
         <!-- Descrição do ebook -->
-        <div class="ebook-description">
-            <strong>ELIMINE SUA GORDURA LOCALIZADA EM POUCAS SEMANAS!</strong>
-            <div class="ebook-descricao"><strong>O método revolucionário</strong> que está transformando vidas <strong>sem dietas</strong> malucas ou exercícios <strong>exaustivos</strong>. </div>
-        </div>
+          <div class="ebook-descricao">
+  <p class="atencao">
+    <strong>Atenção:</strong> Você está quase começando a sua jornada para eliminar de vez aquela gordura localizada e perder peso com o método que já ajudou muitas mulheres em Angola!
+
+  </p>
+</div>
         
         <!-- Botão de compra -->
-        <button class="buy-button"onclick="window.location.href='https://monjaropobre-finalize-sua-compra.onrender.com/'">COMPRAR AGORA</button>
+        <div class="btn-checkout-area">
+  <a href="https://monjaropobre-finalize-sua-compra.onrender.com/" class="btn-cta">QUERO ESSA RECEITA</a>
+  <img class="icones-seguro" src="https://i.ibb.co/DDKg32jF/compra-segura-1024x147-1.webp" alt="Compra Segura">
+</div>
         
         <!-- Selos de segurança -->
         <img src="https://i.ibb.co/LhbXv1Lc/icones-de-protecao-preto-1-1-2-png.webp" alt="Compra Segura" class="secure-purchase">
     </section>
-    
+    <section class="sobre-o-produto">
+  <div class="container">
+    <h2>
+  O que é o <span class="preto"></span> <span class="verde">Monjaro de Pobre</span>
+</h2>
+      O <strong>“Monjaro de Pobre”</strong> é uma receita natural e acessível, criada para quem quer emagrecer de verdade sem depender de injeções caras, academia ou dietas malucas.<p>Inspirada nos efeitos do famoso remédio Monjaro, essa versão caseira combina ingredientes simples que ajudam a acelerar o metabolismo, controlar o apetite e queimar gordura de forma natural. </p>
+    <ul>
+      <li>Receitas 100% naturais e seguras</li>
+      <li>Ingredientes fáceis de encontrar no mercado</li>
+      <li>Ajuda a reduzir barriga, inchaço, retenção e eliminar a gordura localizada</li>
+      <li>Ideal para quem deseja ter sua autoestima de volta</li>
+    </ul>
+  </div>
+</section>
    
-            
-            <!-- Seção Motivos para adquirir o Monjaro Pobre -->
-<section class="bene-section" style="padding: 60px 20px; background-color: #ea3675;">
-    <div style="max-width: 1200px; margin: 0 auto;">
-        <h2 class="section-title" style="text-align: center; color: #ffffff; font-size: 2rem; margin-bottom: 40px;">
-            <strong>MOTIVOS PARA VOCÊ ADQUIRIR O MONJARO POBRE:</strong>
-        </h2>
+<section class="porque-monjaro">
+  <h2>Ao adquirir seu Monjaro Pobre Hoje, <span class="vverde">Você recebe todos os bônus de presente</span></h2>
 
-        <div class="bene-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
-            <!-- Quadro 1 -->
-            <div class="bene-card" style="background-color: #6e003c; border-radius: 15px; padding: 25px; color: #ffffff; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);">
-                <h3 class="bene-title" style="font-size: 1.2rem; color: #e6833f; margin-bottom: 10px;">Resultados Sem Remédios Caros</h3>
-                <p style="line-height: 1.6;">Por que gastar fortunas com medicamentos se você pode alcançar efeitos similares com métodos naturais? O Monjaro Pobre traz combinações de chás, alimentos e métodos que aceleram o metabolismo sem químicos sintéticos, 100% natural.</p>
-            </div>
-
-            <!-- Quadro 2 -->
-            <div class="bene-card" style="background-color: #6e003c; border-radius: 15px; padding: 25px; color: #ffffff; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);">
-                <h3 class="bene-title" style="font-size: 1.2rem; color: #e6833f; margin-bottom: 10px;">Baixo Investimento</h3>
-                <p style="line-height: 1.6;">Enquanto o tratamento original exige altos investimentos, nosso ebook ensina técnicas com ingredientes que você já tem em casa. Economize dinheiro sem abrir mão dos resultados.</p>
-            </div>
-
-            <!-- Quadro 3 -->
-            <div class="bene-card" style="background-color: #6e003c; border-radius: 15px; padding: 25px; color: #ffffff; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);">
-                <h3 class="bene-title" style="font-size: 1.2rem; color: #e6833f; margin-bottom: 10px;">Satisfação sem Efeitos Colaterais</h3>
-                <p style="line-height: 1.6;">Sem riscos de reações adversas! As receitas do Monjaro Pobre usam elementos da natureza para emagrecer com saúde, melhorando sua autoestima de forma segura.</p>
-            </div>
-
-            <!-- Quadro 4 -->
-            <div class="bene-card" style="background-color: #6e003c; border-radius: 15px; padding: 25px; color: #ffffff; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);">
-                <h3 class="bene-title" style="font-size: 1.2rem; color: #e6833f; margin-bottom: 10px;">Método Acessível a Todos</h3>
-                <p style="line-height: 1.6;">Não depende de consultas médicas ou farmácias. Qualquer pessoa, em qualquer lugar, pode seguir essas receitas e métodos simples e adaptáveis à sua vida.</p>
-            </div>
-
-            <!-- Quadro 5 -->
-            <div class="bene-card" style="background-color: #6e003c; border-radius: 15px; padding: 25px; color: #ffffff; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);">
-                <h3 class="bene-title" style="font-size: 1.2rem; color: #e6833f; margin-bottom: 10px;">Saúde Duradoura</h3>
-                <p style="line-height: 1.6;">Mais que um emagrecimento rápido, o ebook ensina hábitos sustentáveis para manter o peso ideal e prevenir doenças como diabetes e pressão alta.</p>
-            </div>
-
-            <!-- Quadro 6 -->
-            <div class="bene-card" style="background-color: #6e003c; border-radius: 15px; padding: 25px; color: #ffffff; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);">
-                <h3 class="bene-title" style="font-size: 1.2rem; color: #e6833f; margin-bottom: 10px;">Comece Hoje Mesmo</h3>
-                <p style="line-height: 1.6;">Não precisa esperar aprovação médica ou encomendas. Baixe agora e transforme sua cozinha na sua maior aliada para um corpo saudável.</p>
-            </div>
-        </div>
+  <div class="bloco vermelho">
+    <div class="imagem-area imagem-1">
+      <img src="https://i.ibb.co/gbLz8xjs/Screenshot-20250801-175935.webp" alt="Ícone 1">
     </div>
+    <div class="texto-area">
+      <h3 class="subtitulo">Impulsione seu metabolismo naturalmente</h3>
+      <p>Com esse guia prático, você vai aprender como ativar o "modo turbo" do seu corpo, acelerando o metabolismo de forma natural e segura — ideal para quem quer resultados mais rápidos sem precisar depender de academia ou suplementos caros.
+</p>
+    </div>
+  </div>
+
+  <div class="bloco castanho">
+    <div class="imagem-area imagem-2">
+      <img src="https://i.ibb.co/rGL10npz/Background-Eraser-20250801-175525908.webp" alt="Ícone 2">
+    </div>
+    <div class="texto-area">
+      <h3 class="subtitulo">Guia da Queimadura de Gordura</h3>
+      <p>Descubra os segredos para queimar gordura mesmo em repouso. Técnicas e hábitos fáceis de aplicar que ajudam seu corpo a se tornar uma máquina de queima calórica 24 horas por dia.
+</p>
+    </div>
+  </div>
+
+  <div class="bloco rojo">
+    <div class="imagem-area imagem-3">
+      <img src="https://i.ibb.co/HpgmrRfP/Background-Eraser-20250801-175106075.webp" alt="Ícone 3">
+    </div>
+    <div class="texto-area">
+      <h3 class="subtitulo">Desinche sua barriga em poucos dias</h3>
+      <p>Receitas simples e naturais para limpar seu organismo, reduzir o inchaço abdominal e melhorar sua disposição. Uma desintoxicação leve que você pode começar ainda hoje.
+</p>
+    </div>
+  </div>
 </section>
 
-            
-<section class="natural-solution" style="padding: 80px 20px; background-color: #6e003c;">
-    <div style="max-width: 1100px; margin: 0 auto;">
-        <h2 class="section-title" style="color: #ffffff; margin-bottom: 50px; text-align: center; font-size: 2rem; position: relative;">
-            A SOLUÇÃO NATURAL DO MONJARO POBRE
-            <div style="width: 80px; height: 3px; background: #ba1010; margin: 15px auto 0;"></div>
-        </h2>
-        
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px;">
-            <!-- Chá de Gengibre -->
-            <div style="background: #6e003c; border-radius: 15px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
-                <div style="width: 100%; height: 200px; overflow: hidden;">
-                    <img src="https://i.ibb.co/k2DV2hqB/eaa68cfc2296860bc1c9785081816cd9.jpg" alt="Chá de Gengibre" style="width: 100%; height: 100%; object-fit: cover;">
-                </div>
-                <div style="padding: 20px;">
-                    <h3 style="color: #ff9011; margin-top: 0; font-size: 1.3rem;">Chá Termogênico de Gengibre</h3>
-                    <p style="color: #ebebeb; margin-bottom: 15px;">Acelera o metabolismo e queima gordura com ingredientes que você já tem em casa.</p>
-                    <ul style="padding-left: 20px; margin: 0; color:#ebebeb;">
-                        <li style="margin-bottom: 8px; position: relative; list-style: none; padding-left: 25px;">
-                            <svg style="position: absolute; left: 0; top: 4px; width: 16px; height: 16px; fill: #2e8b57;" viewBox="0 0 24 24">
-                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
-                            </svg>
-                            Queima gordura abdominal
-                        </li>
-                        <li style="margin-bottom: 8px; position: relative; list-style: none; padding-left: 25px;">
-                            <svg style="position: absolute; left: 0; top: 4px; width: 16px; height: 16px; fill: #2e8b57;" viewBox="0 0 24 24">
-                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
-                            </svg>
-                            Reduz inflamações
-                        </li>
-                        <li style="margin-bottom: 8px; position: relative; list-style: none; padding-left: 25px;">
-                            <svg style="position: absolute; left: 0; top: 4px; width: 16px; height: 16px; fill: #2e8b57;" viewBox="0 0 24 24">
-                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
-                            </svg>
-                            Controla o apetite
-                        </li>
-                        <li style="position: relative; list-style: none; padding-left: 25px;">
-                            <svg style="position: absolute; left: 0; top: 4px; width: 16px; height: 16px; fill: #2e8b57;" viewBox="0 0 24 24">
-                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
-                            </svg>
-                            Preparo em 5 minutos
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            
-            <!-- Chá de Hibisco -->
-            <div style="background: #6e003c; border-radius: 15px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
-                <div style="width: 100%; height: 200px; overflow: hidden;">
-                    <img src="https://i.ibb.co/67rsRXdJ/38a8fa2f73904f6e015eb65bea8405c6.jpg" alt="Chá de Hibisco" style="width: 100%; height: 100%; object-fit: cover;">
-                </div>
-                <div style="padding: 20px;">
-                    <h3 style="color: #ff9011; margin-top: 0; font-size: 1.3rem;">Detox de Hibisco</h3>
-                    <p style="color: #ebebeb; margin-bottom: 15px;">Elimina toxinas e reduz medidas sem produtos caros ou fórmulas milagrosas.</p>
-                    <ul style="padding-left: 20px; margin: 0; color:#ebebeb;">
-                        <li style="margin-bottom: 8px; position: relative; list-style: none; padding-left: 25px;">
-                            <svg style="position: absolute; left: 0; top: 4px; width: 16px; height: 16px; fill: #2e8b57;" viewBox="0 0 24 24">
-                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
-                            </svg>
-                            Diminui retenção líquidos
-                        </li>
-                        <li style="margin-bottom: 8px; position: relative; list-style: none; padding-left: 25px;">
-                            <svg style="position: absolute; left: 0; top: 4px; width: 16px; height: 16px; fill: #2e8b57;" viewBox="0 0 24 24">
-                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
-                            </svg>
-                            Combate celulite
-                        </li>
-                        <li style="margin-bottom: 8px; position: relative; list-style: none; padding-left: 25px;">
-                            <svg style="position: absolute; left: 0; top: 4px; width: 16px; height: 16px; fill: #2e8b57;" viewBox="0 0 24 24">
-                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
-                            </svg>
-                            Melhora digestão
-                        </li>
-                        <li style="position: relative; list-style: none; padding-left: 25px;">
-                            <svg style="position: absolute; left: 0; top: 4px; width: 16px; height: 16px; fill: #2e8b57;" viewBox="0 0 24 24">
-                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
-                            </svg>
-                            Substitui refrigerantes
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            
-            <!-- Papa de Aveia -->
-            <div style="background: #6e003c; border-radius: 15px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
-                <div style="width: 100%; height: 200px; overflow: hidden;">
-                    <img src="https://i.ibb.co/gZDkNX3x/86495329252df3c57f7dcbeecfd702f9.jpg" style="width: 100%; height: 100%; object-fit: cover;">
-                </div>
-                <div style="padding: 20px;">
-                    <h3 style="color: #ff9011; margin-top: 0; font-size: 1.3rem;">Papa de Aveia Energética</h3>
-                    <p style="color: #ebebeb; margin-bottom: 15px;">Café da manhã poderoso que mantém a saciedade por horas.</p>
-                    <ul style="padding-left: 20px; margin: 0; color:#ebebeb;">
-                        <li style="margin-bottom: 8px; position: relative; list-style: none; padding-left: 25px;">
-                            <svg style="position: absolute; left: 0; top: 4px; width: 16px; height: 16px; fill: #2e8b57;" viewBox="0 0 24 24">
-                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
-                            </svg>
-                            Corta vontade de doce
-                        </li>
-                        <li style="margin-bottom: 8px; position: relative; list-style: none; padding-left: 25px;">
-                            <svg style="position: absolute; left: 0; top: 4px; width: 16px; height: 16px; fill: #2e8b57;" viewBox="0 0 24 24">
-                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
-                            </svg>
-                            Fonte de energia
-                        </li>
-                        <li style="margin-bottom: 8px; position: relative; list-style: none; padding-left: 25px;">
-                            <svg style="position: absolute; left: 0; top: 4px; width: 16px; height: 16px; fill: #2e8b57;" viewBox="0 0 24 24">
-                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
-                            </svg>
-                            Regula intestino
-                        </li>
-                        <li style="position: relative; list-style: none; padding-left: 25px;">
-                            <svg style="position: absolute; left: 0; top: 4px; width: 16px; height: 16px; fill: #2e8b57;" viewBox="0 0 24 24">
-                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
-                            </svg>
-                            Custa menos de 300kzs
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        
-       
-        </div>
-    </div>
-</section>
+<section class="mais-vendido">
+  <!-- Imagem Antes e Depois -->
+  <div class="imagem-antes-depois" style="text-align: center;">
+    <img src="https://i.ibb.co/xVVg0T3/Screenshot-20250802-113303.webp" alt="Antes e Depois" style="max-width: 300px; border-radius: 4px;">
+  </div>
 
-            
-   
+  <!-- Fita Mais Vendido -->
+  <div class="fita-venda" style="
+      background-color: #3cb371; 
+      color: white; 
+      padding: 4px 67px; 
+      font-weight: bold; 
+      text-transform: uppercase; 
+      font-size: 0.78rem;
+      width: fit-content;
+      margin: 15px auto;
+      border-radius: 16px;
+  ">Nina Carlos, perdeu 12kg em 2meses
+    
+  </div>
 
-    
- 
-    
- <!-- Seção Valores - Versão Atualizada -->
-<section class="pain-section" style="padding: 60px 20px; background-color: #000000;">
-    <div style="max-width: 1000px; margin: 0 auto;">
-        <h2 class="section-title" style="color: #e5e4e4; margin-bottom: 40px;">O QUE É MAIS IMPORTANTE PARA VOCÊ?</h2>
-        
-        <div class="value-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px;">
-            <!-- Itens com tamanhos uniformes -->
-            <div class="value-item" style="display: flex; flex-direction: column; align-items: center;">
-                <div style="width: 100%; height: 200px; overflow: hidden; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-                    <img src="https://i.ibb.co/bgPyMZwW/1752489325275.jpg" alt="Peruca" 
-                         style="width: 100%; height: 100%; object-fit: cover;">
-                </div>
-                <p style="margin: 15px 0 5px; font-size: 1.2rem; font-weight: bold; color: #ececec;">Peruca</p>
-                <div class="price-box" style="background: #ba1010; color: white; padding: 5px 15px; border-radius: 20px; font-weight: bold;">150.000kzs</div>
-            </div>
-            
-            <div class="value-item" style="display: flex; flex-direction: column; align-items: center;">
-                <div style="width: 100%; height: 200px; overflow: hidden; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-                    <img src="https://i.ibb.co/DgYLWB0G/i-Phone-15-Pro-Black-Titanium-PDP-Image-Position-1-en-IN-955a5f8b-9006-4919-92f4-ddfa2ebec8f6.jpg" alt="Iphone" 
-                         style="width: 100%; height: 100%; object-fit: cover;">
-                </div>
-                <p style="margin: 15px 0 5px; font-size: 1.2rem; font-weight: bold; color: #e4e4e4;">Iphone</p>
-                <div class="price-box" style="background: #ba1010; color: white; padding: 5px 15px; border-radius: 20px; font-weight: bold;">950.000kzs</div>
-            </div>
-            
-            <div class="value-item" style="display: flex; flex-direction: column; align-items: center;">
-                <div style="width: 100%; height: 200px; overflow: hidden; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-                    <img src="https://i.ibb.co/ym3sgnrd/images-5.jpg" alt="Grade-Cerveja" 
-                         style="width: 100%; height: 100%; object-fit: cover;">
-                </div>
-                <p style="margin: 15px 0 5px; font-size: 1.2rem; font-weight: bold; color: #f0f0f0;">Grade-Cerveja</p>
-                <div class="price-box" style="background: #ba1010; color: white; padding: 5px 15px; border-radius: 20px; font-weight: bold;">6.100kzs</div>
-            </div>
-            
-            <div class="value-item" style="display: flex; flex-direction: column; align-items: center;">
-                <div style="width: 100%; height: 200px; overflow: hidden; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-                    <img src="https://i.ibb.co/NPhzjNk/1752105636.png" alt="Bem-estar" 
-                         style="width: 100%; height: 100%; object-fit: cover;">
-                </div>
-                <p style="margin: 15px 0 5px; font-size: 1.2rem; font-weight: bold; color: #eeeeee;">Bem-estar</p>
-                <div class="price-box" style="background: #ba1010; color: white; padding: 5px 15px; border-radius: 20px; font-weight: bold;">5.497kzs</div>
-            </div>
-        </div>
-        
-        <div style="text-align: center; margin-top: 40px;">
-            <p style="font-size: 1rem; color: #e5e5e5; line-height: 1.6; max-width: 800px; margin: 0 auto 30px;">
-                A nossa saúde é o bem mais importante que temos. Para comprar algo que não agrega valor à nossa vida nós não olhamos o preço, mas quando é a nossa saúde, hesitamos. Invista na sua saúde.
-            </p>
-            <button class="cta-button" style="font-size: 1.2rem; padding: 12px 40px;"onclick="window.location.href='https://monjaropobre-finalize-sua-compra.onrender.com/'">QUERO INVESTIR EM MIM!</button>
-        </div>
-    </div>
-</section>
-   <!-- Nova Seção: Ebook com Preço Promocional -->
-    <section style="padding: 60px 20px; background-color: #190020; text-align: center;">
-   <!-- Detalhes do Preço --><div style="margin-bottom: 25px;">
-            <h2 style="color: #eae8e9; font-size: 28px; margin: 0; line-height: 1.3; text-transform: uppercase;">
-                PREÇO PROMOCIONAL<br>
-                <span style="font-size: 24px; display: inline-block; margin-top: 8px; color:#b30059;">POR TEMPO LIMITADO!</span>
-            </h2>
-        </div>
-                    <!-- Desconto -->
-        <p style="color: #c6c6c6; font-size: 15px; margin-bottom: 25px; line-height: 1.5;">
-            Você terá acesso a esta oportunidade única hoje com mais de
-            <strong style="color: #c68100; font-size: 15px;">93,67% de desconto</strong>
-        </p>
-                            <!-- Valor Original -->
-    <p style="color: #777; font-size: 14px; margin: 0;">
-        DE: <span style="text-decoration: line-through; color: #b30059; font-size: 16px; font-weight: bold;">12.800Kzs</span>
-    </p>
-    
-    <!-- Valor Promocional -->
-    <p style="color: #777; font-size: 14px; margin: 5px 0 10px 0;">
-        POR APENAS:
-    </p>
-                    
-                        <p style="font-size: 3rem; font-weight: bold; color:#be2293; margin-bottom: 20px;">5.497Kzs</p>
-                        
-                       
-                        
-                   <button class="cta-button" style="font-size: 0.9rem; padding: 15px 50px;" onclick="window.location.href='https://monjaropobre-finalize-sua-compra.onrender.com/'">
-    SIM! EU QUERO O MONJARO POBRE
-</button>
-                        
-                        <div style="margin-top: 30px; display: flex; justify-content: center; align-items: center; gap: 15px;">
-                            <img src="https://i.ibb.co/LhbXv1Lc/icones-de-protecao-preto-1-1-2-png.webp" alt="Compra Segura" style="max-width: 200px;">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-           
-        </div>
-    </section>
+<section class="checkout-quadro">
 
-    
-    <!-- Seção Resultados -->
-    <section class="results-section">
-        <h2 class="section-title">Veja os Resultados de pessoas que adquiriram o Monjaro Pobre </h2>
-        <div class="slider-container">
-            <div class="slider">
-                <div class="slide">
-                    <img src="https://i.ibb.co/whDWmWnw/Screenshot-20250714-120626-1.jpg" alt="Antes e Depois 1">
-                </div>
-                <div class="slide">
-                    <img src="https://i.ibb.co/Q5xTKnh/Screenshot-20250714-120732.jpg" alt="Antes e Depois 2">
-                </div>
-                <div class="slide">
-                    <img src="https://i.ibb.co/mFM5hjYN/Screenshot-20250714-120715.jpg" alt="Antes e Depois 3">
-                </div>
-                <div class="slide">
-                    <img src="https://i.ibb.co/nMK8cXZ3/Screenshot-20250714-120540.jpg" alt="Antes e Depois 5">
-                </div>
-                <div class="slide">
-                    <img src="https://i.ibb.co/394YTJMm/Screenshot-20250714-120456.jpg" alt="Antes e Depois 6">
-                </div>
-                <div class="slide">
-                    <img src="https://i.ibb.co/j9QdYDv2/Screenshot-20250714-120433.jpg" alt="Antes e Depois 7">
-                </div>
-                <div class="slide">
-                    <img src="https://i.ibb.co/KPdLWWD/Screenshot-20250714-120415.jpg" alt="Antes e Depois 8">
-                </div>
-            </div>
-        </div>
-         <p style="font-size: 1.2rem; margin-top: 20px; text-align: center;">
-            <strong>Faça como elas e tenha os mesmos resultados ou melhores</strong>
-        </p>
-        <button class="cta-botao"onclick="window.location.href='https://monjaropobre-finalize-sua-compra.onrender.com/'">EU QUERO ESSES RESULTADOS!</button>
-        
-    </section>
-    
-    <!-- Seção Bônus -->
-    <section class="bonus-section">
-       
-        <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
-            <h2 class="section-title"> <span style="color: #E6833F;">Por hoje, ao adquirir o Monjaro Pobre você recebe um presente</span></h2>
-            
-            <div class="bonus-container">
-              
-              <img src="https://i.ibb.co/sppZqzvt/Background-Eraser-20250426-164522928.png" alt="Bônus Ebook" style="max-width: 300px;
-                  margin-bottom: 10px; ">
-                  <h3 style="font-size: 1.0rem; margin-bottom: 40px; color: #f48010;">
-                    JEJUM INTERMITENTE DA QUEIMA</h3>
-                     <p style="font-size: 1rem; margin-bottom: 45px; color: #ce5200">
-                    Guia de nutrição natural com 10 receitas para secar a barriga Low Card
-                </p>
-                
-              
-               <div class="bonus-value" style="display: flex; align-items: center; justify-content: center; gap: 10px;">
-    0,0kzs
-    <p style="text-decoration: line-through; font-size: 1.1rem; color: #fec380; margin: 0;">
-        12.500kzs
-    </p>
+  <!-- LOGO CENTRALIZADA -->
+  <img class="checkout-logo" src="https://i.ibb.co/S4W9DJc5/h-TSo-MYvay-Vz-OPRa-PXQUKi-Vr-OJsfzt-Mw-SDAXZH5y8-IBF1ph-E7.webp" alt="Logo Monjaro de Pobre">
+
+  <!-- TÍTULO -->
+ <h2 class="checkout-titulo" style="color: #ffffff;">TUDO QUE VOCÊ</h2>
+ <h2 class="checkout-titulol" style="color: #fbff04;">
+  VAI RECEBER <span style="color: #fdfdfd;">HOJE</span>
+</h2>
+
+  <!-- ITENS -->
+ <div class="item-checkout">
+  <div class="icone-quadrado-svg">
+    <svg class="svg-check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <path d="M5 13L9 17L19 7" fill="none" stroke="#dbd419" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
+  <div>
+    <p class="check-titulo">Mounjaro de Pobre Completo</p>
+    <p class="check-desc">e Passo a Passo de como usar.</p>
+  </div>
 </div>
+
+<div class="item-checkout">
+  <div class="icone-quadrado-svg">
+    <svg class="svg-check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <path d="M5 13L9 17L19 7" fill="none" stroke="#dbd419" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
+  <div>
+    <p class="check-titulo">Detox Exclusivo 7 Dias.</p>
+    <p class="check-desc"></p>
+  </div>
 </div>
-        </div>
-    </section>
 
-        
-    <!-- Seção Garantia -->
-    <section class="guarantee-section">
-        <h2 class="section-titleesco"><strong>Garantia Incondicional</strong></h2>
-        <img src="https://i.ibb.co/BVLW5MNm/Background-Eraser-20250719-234816074.png" alt="Selo de Garantia" class="guarantee-img">
-        <p style="max-width: 700px; margin: 0 auto 20px; font-size: 1.2rem;
-        color#100015;">
-            Se em 30 dias você não ver resultados significativos, devolvemos 100% do seu investimento. Sem perguntas, sem burocracia.
-        </p>
-        
-    </section>
+<div class="item-checkout">
+  <div class="icone-quadrado-svg">
+    <svg class="svg-check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <path d="M5 13L9 17L19 7" fill="none" stroke="#dbd419" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
+  <div>
+    <p class="check-titulo">Pagamento Único</p>
+    <p class="check-desc">Sem Mensalidades!</p>
+  </div>
+</div>
+<div class="bonus-alerta">
+  <span class="icone-bonus-svg">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="11" fill="#78ff7d" stroke="#f8faf8" stroke-width="2"/>
+      <path d="M7 12l3 3 7-7" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </span>
+  VOCÊ RECEBE TODOS OS 3 BÔNUS ACIMA <strong>HOJE!</strong>
+</div>
+  <!-- PREÇO E AVISO -->
+ <div class="preco-area">
+    <p class="preco-antigo">Valor Total: <s>13.998Kzs</s></p>
+    <p class="preco-final">🥰 Por Apenas:</p>
+    <p class="valor-promocional">5.497Kzs</p>
+  </div>
+   <h2 class="checkout-tituloll" style="color: #ffffff;">O Segredo para Desinchar, Perder Medidas</h2>
+ <h2 class="checkout-titulolll" style="color: #fbff04;"><span style="color: #fdfdfd;">e Se Sentir Mais Linda em poucos Dias!</span>
+</h2>
+</section>
 
-<!-- Seus scripts de funcionalidades anteriores -->
+<!-- BOTÃO + ICONES DE SEGURANÇA -->
+<div class="btn-checkout-area">
+  <a href="https://monjaropobre-finalize-sua-compra.onrender.com/" class="btn-cta">Quero começar Hoje🥰</a>
+  <img class="icones-seguro" src="https://i.ibb.co/DDKg32jF/compra-segura-1024x147-1.webp" alt="Compra Segura">
+</div>
+    
+<section class="results-section">
+  <h2 class="section-title">
+    <span class="texto-preto">Quem Usa</span>
+    <span class="texto-verde"> Tem Resultado 🙂👇</span>
+  </h2>
+
+  <div class="slider-wrapper">
+    <button class="slide-btn prev-btn">&#10094;</button>
+    
+    <div class="slider-container">
+      <div class="slider">
+        <div class="slide"><img src="https://i.ibb.co/whDWmWnw/Screenshot-20250714-120626-1.jpg" alt="Antes e Depois 1"></div>
+        <div class="slide"><img src="https://i.ibb.co/Q5xTKnh/Screenshot-20250714-120732.jpg" alt="Antes e Depois 2"></div>
+        <div class="slide"><img src="https://i.ibb.co/mFM5hjYN/Screenshot-20250714-120715.jpg" alt="Antes e Depois 3"></div>
+        <div class="slide"><img src="https://i.ibb.co/nMK8cXZ3/Screenshot-20250714-120540.jpg" alt="Antes e Depois 5"></div>
+        <div class="slide"><img src="https://i.ibb.co/394YTJMm/Screenshot-20250714-120456.jpg" alt="Antes e Depois 6"></div>
+        <div class="slide"><img src="https://i.ibb.co/j9QdYDv2/Screenshot-20250714-120433.jpg" alt="Antes e Depois 7"></div>
+        <div class="slide"><img src="https://i.ibb.co/KPdLWWD/Screenshot-20250714-120415.jpg" alt="Antes e Depois 8"></div>
+      </div>
+    </div>
+    
+    <button class="slide-btn next-btn">&#10095;</button>
+  </div>
+</section>
+    
+<!-- Seção Garantia -->
+<section class="guarantee-section" style="text-align: center; padding: 40px 20px;">
+  <h2 class="section-titleesco" style="color: #000; font-size: 20px;"><strong>Garantia de Reembolso</strong></h2>
+
+  <img src="https://i.ibb.co/Wv3rg4Td/download.webp" alt="Selo de Garantia" class="guarantee-img" style="max-width: 160px; margin: 20px auto; display: block;">
+
+  <p style="max-width: 700px; margin: 20px auto; font-size: 1.2rem; color: #333;">
+    Se em 30 dias você não ver resultados significativos, devolvemos 100% do seu investimento. Sem perguntas, sem burocracia.
+  </p>
+    <h3 style="color: #2e7d32; font-size: 18px; margin-top: 5px;">Basta enviar um email para o nosso suporte: monjarodepobre088@gmail.com</h3>
+
+
+  <!-- Depoimentos -->
+  <div style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; margin-top: 40px;">
+    <!-- Depoimento 1 -->
+    <div style="background: #f9f9f9; padding: 20px; border-radius: 16px; max-width: 300px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+      <div style="margin-bottom: 10px;">
+        <!-- Estrelas SVG -->
+        <svg fill="#FFC107" height="24" width="24"><polygon points="12,2 15,9 23,9 17,14 19,22 12,18 5,22 7,14 1,9 9,9"/></svg>
+        <svg fill="#FFC107" height="24" width="24"><polygon points="12,2 15,9 23,9 17,14 19,22 12,18 5,22 7,14 1,9 9,9"/></svg>
+        <svg fill="#FFC107" height="24" width="24"><polygon points="12,2 15,9 23,9 17,14 19,22 12,18 5,22 7,14 1,9 9,9"/></svg>
+        <svg fill="#FFC107" height="24" width="24"><polygon points="12,2 15,9 23,9 17,14 19,22 12,18 5,22 7,14 1,9 9,9"/></svg>
+        <svg fill="#FFC107" height="24" width="24"><polygon points="12,2 15,9 23,9 17,14 19,22 12,18 5,22 7,14 1,9 9,9"/></svg>
+      </div>
+      <strong>Isabel Pereira</strong>
+      <p style="font-size: 14px; margin-top: 8px;">“Comprei com receio, mas fiquei surpresa! Em menos de 3 semanas já notei mudanças no meu corpo. Super recomendo.”</p>
+    </div>
+
+    <!-- Depoimento 2 -->
+    <div style="background: #f9f9f9; padding: 20px; border-radius: 16px; max-width: 300px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+      <div style="margin-bottom: 10px;">
+        <svg fill="#FFC107" height="24" width="24"><polygon points="12,2 15,9 23,9 17,14 19,22 12,18 5,22 7,14 1,9 9,9"/></svg>
+        <svg fill="#FFC107" height="24" width="24"><polygon points="12,2 15,9 23,9 17,14 19,22 12,18 5,22 7,14 1,9 9,9"/></svg>
+        <svg fill="#FFC107" height="24" width="24"><polygon points="12,2 15,9 23,9 17,14 19,22 12,18 5,22 7,14 1,9 9,9"/></svg>
+        <svg fill="#FFC107" height="24" width="24"><polygon points="12,2 15,9 23,9 17,14 19,22 12,18 5,22 7,14 1,9 9,9"/></svg>
+        <svg fill="#FFC107" height="24" width="24"><polygon points="12,2 15,9 23,9 17,14 19,22 12,18 5,22 7,14 1,9 9,9"/></svg>
+      </div>
+      <strong>Maria Alfredo</strong>
+      <p style="font-size: 14px; margin-top: 8px;">“O melhor investimento que já fiz na minha saúde. E o melhor: tem garantia mesmo, sem desculpas.”</p>
+    </div>
+
+    <!-- Depoimento 3 -->
+    <div style="background: #f9f9f9; padding: 20px; border-radius: 16px; max-width: 300px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+      <div style="margin-bottom: 10px;">
+        <svg fill="#FFC107" height="24" width="24"><polygon points="12,2 15,9 23,9 17,14 19,22 12,18 5,22 7,14 1,9 9,9"/></svg>
+        <svg fill="#FFC107" height="24" width="24"><polygon points="12,2 15,9 23,9 17,14 19,22 12,18 5,22 7,14 1,9 9,9"/></svg>
+        <svg fill="#FFC107" height="24" width="24"><polygon points="12,2 15,9 23,9 17,14 19,22 12,18 5,22 7,14 1,9 9,9"/></svg>
+        <svg fill="#FFC107" height="24" width="24"><polygon points="12,2 15,9 23,9 17,14 19,22 12,18 5,22 7,14 1,9 9,9"/></svg>
+        <svg fill="#FFC107" height="24" width="24"><polygon points="12,2 15,9 23,9 17,14 19,22 12,18 5,22 7,14 1,9 9,9"/></svg>
+      </div>
+      <strong>Patrícia Mendes</strong>
+      <p style="font-size: 14px; margin-top: 8px;">“Além do atendimento excelente, o produto funciona mesmo! Com dois filhos pequenos, essa praticidade fez diferença.”</p>
+    </div>
+
+    <!-- Depoimento 4 -->
+    <div style="background: #f9f9f9; padding: 20px; border-radius: 16px; max-width: 300px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+      <div style="margin-bottom: 10px;">
+        <svg fill="#FFC107" height="24" width="24"><polygon points="12,2 15,9 23,9 17,14 19,22 12,18 5,22 7,14 1,9 9,9"/></svg>
+        <svg fill="#FFC107" height="24" width="24"><polygon points="12,2 15,9 23,9 17,14 19,22 12,18 5,22 7,14 1,9 9,9"/></svg>
+        <svg fill="#FFC107" height="24" width="24"><polygon points="12,2 15,9 23,9 17,14 19,22 12,18 5,22 7,14 1,9 9,9"/></svg>
+        <svg fill="#FFC107" height="24" width="24"><polygon points="12,2 15,9 23,9 17,14 19,22 12,18 5,22 7,14 1,9 9,9"/></svg>
+        <svg fill="#FFC107" height="24" width="24"><polygon points="12,2 15,9 23,9 17,14 19,22 12,18 5,22 7,14 1,9 9,9"/></svg>
+      </div>
+      <strong>Cândida Tomás</strong>
+      <p style="font-size: 14px; margin-top: 8px;">“Emagreci 6kg em 1 mês e sem passar fome. Valeu cada Kz investido! A garantia me deu mais confiança.”</p>
+    </div>
+  </div>
+  <div class="btn-checkout-area">
+  <a href="https://monjaropobre-finalize-sua-compra.onrender.com/" class="btn-cta">Quero começar Hoje🥰</a>
+</section>
+
+<!-- FAQ - Perguntas Frequentes -->
+<section class="faq-section">
+  <h2 class="faq-title">❓ Perguntas Frequentes</h2>
+
+  <div class="faq-container">
+
+    <div class="faq-item">
+      <div class="faq-question">Esse método realmente funciona pra quem tem mais de 35 anos? <span class="faq-icon">+</span></div>
+      <div class="faq-answer">Sim! O Monjaro de Pobre foi pensado especialmente para pessoas com metabolismo mais lento, como é comum após os 30. Os ingredientes naturais atuam acelerando o metabolismo de forma segura e eficaz.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Preciso fazer dieta ou ir à academia junto com o Monjaro de Pobre? <span class="faq-icon">+</span></div>
+      <div class="faq-answer">Não é obrigatório. O método foi criado para funcionar mesmo sem dieta ou academia. Claro, se você quiser acelerar os resultados, hábitos saudáveis sempre ajudam — mas não são exigência.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Tem algum efeito colateral ou contraindicação? <span class="faq-icon">+</span></div>
+      <div class="faq-answer">Por se tratar de uma receita 100% natural, sem remédios ou substâncias químicas, não há efeitos colaterais relatados. Porém, se você tiver alguma condição médica específica, o ideal é consultar um médico antes.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Sou mãe e tenho problemas com retenção e barriga inchada, isso ajuda mesmo? <span class="faq-icon">+</span></div>
+      <div class="faq-answer">Com certeza! Essa receita foi desenvolvida justamente para ajudar a reduzir retenção, desinchar o abdômen e eliminar gordura localizada — algo muito comum após a gravidez.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Quanto tempo depois de começar vou ver resultados? <span class="faq-icon">+</span></div>
+      <div class="faq-answer">Muitas mulheres relatam sentir diferença nos primeiros 5 a 7 dias. Porém, o ideal é usar por pelo menos 30 dias para resultados mais visíveis e duradouros.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">É seguro comprar esse produto online? E se eu me arrepender? <span class="faq-icon">+</span></div>
+      <div class="faq-answer">A compra é totalmente segura e protegida por selos de segurança digital. Além disso, você tem 30 dias de garantia incondicional: se não gostar, é só pedir o reembolso sem nenhuma explicação.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Os ingredientes são fáceis de achar aqui em Angola? <span class="faq-icon">+</span></div>
+      <div class="faq-answer">Sim! Todos os ingredientes usados no Monjaro de Pobre são acessíveis e vendidos em mercados locais. Nada importado ou difícil de conseguir.</div>
+    </div>
+
+  </div>
+</section>
+
+<script>
+  const slider = document.querySelector(".slider");
+  const slides = document.querySelectorAll(".slide");
+  const prevBtn = document.querySelector(".prev-btn");
+  const nextBtn = document.querySelector(".next-btn");
+
+  let currentIndex = 0;
+  const totalSlides = slides.length;
+
+  function showSlide(index) {
+    const offset = index * -100;
+    slider.style.transform = `translateX(${offset}%)`;
+  }
+
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % totalSlides;
+    showSlide(currentIndex);
+  }
+
+  function prevSlide() {
+    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+    showSlide(currentIndex);
+  }
+
+  nextBtn.addEventListener("click", nextSlide);
+  prevBtn.addEventListener("click", prevSlide);
+
+  // Troca automática
+  setInterval(nextSlide, 5000);
+</script>
+
+
+
+   <!-- Seus scripts de funcionalidades anteriores -->
     <script>
         // Contador decrescente de vagas
         let spots = 100;
@@ -827,29 +1322,8 @@ src="https://www.facebook.com/tr?id=723340397337602&ev=PageView&noscript=1"
         }
         setInterval(nextSlide, 5000);
 
-        // FAQ Acordeão
-        document.querySelectorAll('.faq-question').forEach(question => {
-            question.addEventListener('click', () => {
-                const answer = question.nextElementSibling;
-                const icon = question.querySelector('.faq-icon');
-                const isVisible = answer.style.display === 'block';
-                
-                document.querySelectorAll('.faq-answer').forEach(ans => {
-                    ans.style.display = 'none';
-                });
-                document.querySelectorAll('.faq-icon').forEach(ic => {
-                    ic.textContent = '+';
-                });
-                
-                if (!isVisible) {
-                    answer.style.display = 'block';
-                    icon.textContent = '-';
-                    question.style.background = '#f5f5f5';
-                } else {
-                    answer.style.display = 'none';
-                    icon.textContent = '+';
-                    question.style.background = '#fff';
-                }
+     
+     
             });
         });
     </script>
@@ -874,5 +1348,24 @@ src="https://www.facebook.com/tr?id=723340397337602&ev=PageView&noscript=1"
       a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
       document.head.appendChild(a);
     </script>
+    <!-- JS do FAQ (acordeão) -->
+<script>
+  document.querySelectorAll('.faq-question').forEach(question => {
+    question.addEventListener('click', () => {
+      const answer = question.nextElementSibling;
+      const icon = question.querySelector('.faq-icon');
+      const isVisible = answer.style.display === 'block';
+
+      // Fecha todos
+      document.querySelectorAll('.faq-answer').forEach(ans => ans.style.display = 'none');
+      document.querySelectorAll('.faq-icon').forEach(ic => ic.textContent = '+');
+
+      if (!isVisible) {
+        answer.style.display = 'block';
+        icon.textContent = '−';
+      }
+    });
+  });
+</script>
 </body>
 </html>
